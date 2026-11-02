@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox fx:id="root" spacing="18.0" styleClass="root-pane, theme-male" stylesheets="@../../../../../../AppData/Local/Temp/54e40e86-43fe-4af2-8db5-c25a0f8fdd1d_Calculator_BMI_v2%20(1).zip.d1d/Calculator_BMI/src/main/resources/styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BMIController">
+   <fx:define>
+      <ToggleGroup fx:id="genderGroup" />
+   </fx:define>
+
+
+   <VBox spacing="2.0">
+      <Label styleClass="title" text="BMI Calculator" />
+   </VBox>
+
+   <HBox spacing="18.0">
+      <!-- Kartu input -->
+      <VBox prefWidth="320.0" spacing="8.0" styleClass="card" HBox.hgrow="ALWAYS">
+         <Label styleClass="field-label" text="JENIS KELAMIN" />
+         <HBox spacing="10.0">
+            <ToggleButton fx:id="btnCowok" maxWidth="Infinity" selected="true" styleClass="gender-btn" text="♂  Cowok" HBox.hgrow="ALWAYS">
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup></ToggleButton>
+            <ToggleButton fx:id="btnCewek" maxWidth="Infinity" styleClass="gender-btn" text="♀  Cewek" toggleGroup="$genderGroup" HBox.hgrow="ALWAYS" />
+         </HBox>
+
+         <Label styleClass="field-label" text="BERAT BADAN (KG)">
+            <VBox.margin><Insets top="8.0" /></VBox.margin>
+         </Label>
+         <TextField fx:id="txtBerat" promptText="contoh: 60" styleClass="input" />
+
+         <Label styleClass="field-label" text="TINGGI BADAN (CM)">
+            <VBox.margin><Insets top="8.0" /></VBox.margin>
+         </Label>
+         <TextField fx:id="txtTinggi" promptText="contoh: 170" styleClass="input" />
+
+         <Label fx:id="lblError" managed="false" maxWidth="Infinity" styleClass="error" visible="false" wrapText="true" />
+
+         <HBox spacing="10.0">
+            <VBox.margin><Insets top="10.0" /></VBox.margin>
+            <Button maxWidth="Infinity" onAction="#handleHitungBMI" styleClass="btn-primary" text="Hitung BMI" HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleReset" styleClass="btn-secondary" text="Reset" />
+         </HBox>
+      </VBox>
+
+      <VBox alignment="CENTER" prefWidth="320.0" spacing="8.0" styleClass="card" HBox.hgrow="ALWAYS">
+         <Label fx:id="lblPlaceholder" maxWidth="260.0" styleClass="placeholder" text="Isi berat dan tinggi badanmu, lalu klik Hitung BMI." wrapText="true" />
+
+         <VBox fx:id="resultBox" alignment="TOP_CENTER" managed="false" spacing="6.0" visible="false">
+            <Label styleClass="field-label" text="BMI KAMU" />
+            <Label fx:id="lblBmi" styleClass="bmi-value" text="0.0" />
+            <Label fx:id="lblKategori" styleClass="kategori" text="-" />
+
+            <Pane maxHeight="42.0" maxWidth="270.0" minHeight="42.0" minWidth="270.0" prefHeight="42.0" prefWidth="270.0">
+               <Region layoutX="0.0" layoutY="8.0" prefHeight="10.0" prefWidth="76.5" styleClass="seg-kurang" />
+               <Region layoutX="76.5" layoutY="8.0" prefHeight="10.0" prefWidth="58.5" styleClass="seg-normal" />
+               <Region layoutX="135.0" layoutY="8.0" prefHeight="10.0" prefWidth="45.0" styleClass="seg-lebih" />
+               <Region layoutX="180.0" layoutY="8.0" prefHeight="10.0" prefWidth="90.0" styleClass="seg-obes" />
+               <Circle fx:id="marker" centerX="0.0" centerY="13.0" radius="8.0" styleClass="marker" />
+               <Label alignment="CENTER" layoutX="61.5" layoutY="25.0" prefWidth="30.0" styleClass="tick" text="18.5" />
+               <Label alignment="CENTER" layoutX="120.0" layoutY="25.0" prefWidth="30.0" styleClass="tick" text="25" />
+               <Label alignment="CENTER" layoutX="165.0" layoutY="25.0" prefWidth="30.0" styleClass="tick" text="30" />
+            </Pane>
+
+            <Label fx:id="lblSaran" maxWidth="280.0" prefWidth="280.0" styleClass="saran" wrapText="true" />
+         </VBox>
+      </VBox>
+   </HBox>
+</VBox>
