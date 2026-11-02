@@ -10,7 +10,7 @@ Aplikasi desktop sederhana untuk menghitung Body Mass Index (BMI) dari berat dan
 - Validasi input: kolom kosong, bukan angka, dan angka di luar batas wajar akan menampilkan pesan error
 
 ## Rumus dan Kategori
-` BMI = berat (kg) / tinggi (m) * tinggi (m)
+``` BMI = berat (kg) / tinggi (m) * tinggi (m) ```
 
 | BMI | Kategori |
 | --- | --- |
