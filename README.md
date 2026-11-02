@@ -21,3 +21,8 @@ Aplikasi desktop sederhana untuk menghitung Body Mass Index (BMI) dari berat dan
 
 Batas input yang diterima: tinggi 50-250 cm, berat 10-400 kg.
 
+## Tampilan Applikasi
+<img width="878" height="550" alt="Screenshot 2026-11-02 075641" src="https://github.com/user-attachments/assets/54d0344e-7cb3-47df-9d98-e84bc2e86409" />
+
+<img width="876" height="550" alt="Screenshot 2026-11-02 075816" src="https://github.com/user-attachments/assets/792adef5-80a5-4934-8e38-0ad5c6fe638e" />
+
