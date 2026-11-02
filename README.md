@@ -30,9 +30,12 @@ Batas input yang diterima: tinggi 50-250 cm, berat 10-400 kg.
 
 ## Cara Menjalankan
 ### Lewat Terminal
-```git clone <https://github.com/rhebahan/BMI-Calculator.git>```
-```cd Calculator_BMI```
-```mvn clean javafx:run```
+```bash
+git clone https://github.com/rhebahan/BMI-Calculator.git
+cd Calculator_BMI
+mvn clean javafx:run
+```
+
 ### Lewat NetBeans
 1. Pilih File > Open Project, lalu buka folder Calculator_BMI.
 2. Klik kanan project, pilih Properties > Actions > Run project.
