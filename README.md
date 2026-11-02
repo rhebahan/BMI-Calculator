@@ -2,9 +2,7 @@
 Aplikasi desktop sederhana untuk menghitung Body Mass Index (BMI) dari berat dan tinggi badan. Dibuat dengan JavaFX, FXML, dan Maven, menggunakan pola MVC (Model, View, Controller).
 
 ## Fitur
-- Pilihan jenis kelamin (Cowok / Cewek
-
-)
+- Pilihan jenis kelamin (Cowok / Cewek)
 - Input berat (kg) dan tinggi (cm)
 - Hasil BMI beserta kategorinya (kurus, normal, kelebihan berat badan, obesitas)
 - Skala warna dengan penanda yang menunjukkan posisi BMI
